@@ -12,7 +12,7 @@ export const CartSlice = createSlice({
   const existingItem = state.items.find(item => item.name === name);
 
   if (existingItem) {
-    existingItem.quantity =+1;
+    existingItem.quantity += 1;
   } else {
     state.items.push({ name, image, cost, quantity: 1 });
   }
